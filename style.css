@@ -198,9 +198,11 @@ footer{background:#111;color:#f4f1eb;padding:34px 7vw 25px;border-top:1px solid 
   /* Keep the fixed mobile header readable without letting it visually swallow
      section labels and service rows. */
   .site-header{
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
-    background:rgba(10,10,10,.16);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    background:rgba(10,10,10,.78);
+    color:#fff;
+    mix-blend-mode:normal;
   }
   
   /* Give anchor targets breathing room below the fixed header. */
