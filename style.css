@@ -96,3 +96,113 @@ footer{background:#111;color:#f4f1eb;padding:34px 7vw 25px;border-top:1px solid 
  .editorial-photo{margin-top:75px}.editorial-photo img{height:110vw}.gallery-feature{margin-top:50px}.gallery-feature img{height:115vw}
  .visit{grid-template-columns:1fr}.visit-image{min-height:72vh;height:72vh}.visit-image-note{left:20px;bottom:18px}
 }
+
+
+/* Responsive hardening for mobile browsers using "Desktop Site".
+   Some mobile browsers report a desktop CSS viewport even on phones.
+   Touch/coarse-pointer devices should keep the mobile composition rather than
+   squeezing the desktop grid into a handset. */
+@media (hover: none) and (pointer: coarse) {
+  .site-header{
+    height:66px;
+    padding:0 20px;
+    grid-template-columns:1fr auto;
+  }
+  .desktop-nav,.header-cta{display:none}
+  .menu-toggle{
+    display:flex;
+    justify-self:end;
+    width:34px;
+    height:34px;
+    background:none;
+    border:0;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    padding:0;
+    color:#fff;
+    mix-blend-mode:normal;
+  }
+  .menu-toggle span{height:1px;width:100%;background:currentColor;display:block}
+  .hero{min-height:100svh}
+  .hero-grid{padding:105px 20px 110px;grid-template-columns:1fr auto;grid-template-rows:auto 1fr auto}
+  .hero-word{font-size:18vw}
+  .hero .hero-bottom{left:20px;right:20px;bottom:32px}
+  .hero-bottom p{font-size:12px;max-width:230px}
+  .circle-link{width:56px;height:56px}
+  .hero-scroll{right:16px;bottom:30px}
+  .hero-photo{object-position:62% center}
+  .hero-overlay{background:linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,.12) 42%,rgba(0,0,0,.62))}
+  
+  .section-pad{padding:90px 20px}
+  .section-label{margin-bottom:42px}
+  .intro-grid,.services-head,.gallery-head{display:block}
+  .intro h2,.services h2,.gallery h2{font-size:17vw;margin-bottom:42px}
+  .intro-copy p{font-size:15px}
+  
+  .statement{min-height:78vh;padding:100px 20px}
+  .statement-photo{object-position:58% center}
+  .statement-overlay{background:rgba(10,8,7,.52)}
+  .statement-top{left:20px;top:40px}
+  .statement-word{font-size:22vw}
+  .statement-side{right:20px;bottom:60px}
+  
+  .services-head{margin-bottom:55px}
+  .services-head p{margin-top:0}
+  .service-list a{grid-template-columns:42px 1fr 25px;padding:21px 0}
+  .service-list a:hover{padding-left:0}
+  .service-list strong{font-size:25px}
+  .service-visuals{grid-template-columns:1fr 1fr;gap:12px;margin-top:50px}
+  .service-visuals figure:first-child{grid-column:1/-1}
+  .service-visuals img,.service-visuals figure:first-child img{height:70vw}
+  .service-visuals figure:first-child img{height:110vw}
+  
+  .split-section{grid-template-columns:1fr;min-height:auto}
+  .split-image{height:75vh;min-height:480px}
+  .split-copy{padding:90px 20px}
+  
+  .editorial-grid{display:block}
+  .editorial-number{font-size:35vw;margin-bottom:80px}
+  .editorial h2{font-size:18vw}
+  .editorial-photo{margin-top:75px}
+  .editorial-photo img{height:110vw}
+  
+  .gallery-head p{margin-bottom:45px}
+  .gallery-placeholder{grid-template-columns:1fr;margin-top:50px}
+  .gallery-placeholder div{font-size:19vw;padding:28px 0}
+  .gallery-placeholder span{padding-bottom:28px}
+  .gallery-feature{margin-top:50px}
+  .gallery-feature img{height:115vw}
+  
+  .visit{grid-template-columns:1fr}
+  .visit-image{min-height:72vh;height:72vh}
+  .visit-copy{padding:85px 20px}
+  .visit-copy h2{font-size:18vw}
+  .visit-marker{min-height:400px;font-size:42vw}
+  
+  .contact-grid{display:block}
+  .contact h2{font-size:18vw;margin-bottom:55px}
+  .contact-details>div{grid-template-columns:85px 1fr}
+  
+  .booking{padding:120px 20px}
+  .booking h2{font-size:18vw;margin:40px 0 48px}
+  
+  footer{padding:28px 20px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:30px;padding-bottom:70px}
+  .footer-top p{grid-column:1/-1;grid-row:2}
+  .footer-top>a:last-child{grid-column:2;grid-row:1}
+  .footer-social{grid-column:1/-1;grid-row:3;display:flex;flex-direction:row;gap:18px}
+  .footer-bottom{display:block;line-height:2}
+  .footer-bottom span{display:block}
+  
+  /* Keep the fixed mobile header readable without letting it visually swallow
+     section labels and service rows. */
+  .site-header{
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    background:rgba(10,10,10,.16);
+  }
+  
+  /* Give anchor targets breathing room below the fixed header. */
+  #services,#story,#gallery,#visit,#contact{scroll-margin-top:76px}
+}
