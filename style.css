@@ -37,7 +37,6 @@ footer{background:#111;color:#f4f1eb;padding:34px 7vw 25px;border-top:1px solid 
 .statement-side{position:absolute;right:7vw;bottom:8vw;font-size:10px;letter-spacing:.16em;text-align:right;line-height:1.7}
 .editorial{background:#e5e0d7}
 .editorial-grid{display:grid;grid-template-columns:.45fr 1.55fr;gap:8vw;align-items:end}
-.editorial-number{font-size:clamp(100px,20vw,300px);line-height:.7;letter-spacing:-.1em;color:rgba(17,17,17,.12)}
 .editorial h2{font-size:clamp(58px,7vw,105px);line-height:.86;letter-spacing:-.065em;font-weight:500;margin:0 0 38px}
 .editorial p{max-width:500px;color:#555;line-height:1.7}
 .gallery-placeholder{margin-top:70px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1.4fr 1fr;align-items:center}
